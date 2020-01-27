@@ -63,10 +63,7 @@ connection.connect(function(err) {
   });
 
   app.post("/api/burger", function(req, res) {
-    connection.query("INSERT INTO burger, [req.params.id] function(
-      err,
-      result
-    ) {
+    connection.query("INSERT INTO burger, [req.params.id]", function(err, result) {
       if (err) {
         // If an error occurred, send a generic server failure
         return res.status(500).end();

@@ -1,7 +1,7 @@
 // step 1: pull in the requirements
 var express = require('express');
 var expresshandlebars = require('expresshandlebars')
-var mysql = require('mysql')
+
 
 var port = process.env.PORT || 3000;
 
@@ -16,13 +16,6 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "Trainstogo1@",
-  database: "burger_db"
-});
 
 connection.connect(function(err) {
     if (err) {

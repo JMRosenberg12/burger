@@ -1,7 +1,7 @@
-// Import orm.js
+// Step1: Import orm.js
 var orm = require('../config/orm.js');
 
-// Create the burger object and select all burger table entries
+// Step 2: Create the burger object and select all burger table entries
 var burger = {
     
     selectAll: function(cb) {
@@ -10,14 +10,14 @@ var burger = {
       });
     },
 
-    // The variables cols and vals are arrays
+    // Step 3: The variables cols and vals are arrays
   insertOne: function(cols, vals, cb) {
     orm.insertOne('burgers', cols, vals, function(res) {
       cb(res);
     });
   },
 
-// The objColVals is an object specifying columns as object keys with associated values
+// Step 4: The objColVals is an object specifying columns as object keys with associated values
 updateOne: function(objColVals, condition, cb) {
     orm.updateOne('burgers', objColVals, condition, function(res) {
       cb(res);
@@ -25,5 +25,5 @@ updateOne: function(objColVals, condition, cb) {
   }
 };
 
-// Export the database functions for the controller (burgerController.js).
+// Step 5: Export the database functions for the controller (burgerController.js).
 module.exports = burger;

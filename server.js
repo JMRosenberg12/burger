@@ -1,4 +1,4 @@
-// Step 1: Require express, body-parser, and method-override
+// Step 1: Make sure you have the Requirements
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');

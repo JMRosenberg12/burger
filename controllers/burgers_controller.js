@@ -5,7 +5,7 @@ var router = express.Router();
 // Step 2: Import the model using burger.js in the models folder
 var burger = require('../models/burger.js');
 
-// Create the routes and associated logic like get, post, and put
+// Step 3: Create the routes and associated logic like get, post, and put
 router.get('/', function(req, res) {
     burger.selectAll(function(data) {
       var hbsObject = {
@@ -36,5 +36,5 @@ router.get('/', function(req, res) {
     });
   });
   
-  // Export routes for server.js to use.
+  // Step 4: Export routes by using server.js.
   module.exports = router;

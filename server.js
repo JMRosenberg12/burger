@@ -73,8 +73,8 @@ connection.connect(function(err) {
       res.json({ id: result.insertId });
     });
   });
-  app.delete("/api/quotes/:id", function(req, res) {
-    connection.query("DELETE FROM quotes WHERE id = ?", [req.params.id], function(err, result) {
+  app.delete("/api/burger/:id", function(req, res) {
+    connection.query("DELETE FROM burgers WHERE id = ?", [req.params.id], function(err, result) {
       if (err) {
         // If an error occurred, send a generic server failure
         return res.status(500).end();

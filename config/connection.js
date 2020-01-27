@@ -1,4 +1,14 @@
+// Step 1: Pull in required dependencies
 var mysql = require("mysql");
+
+// Step 2: Create the object for the MySQL connection 
+var connection;
+
+if (process.env.JAWSDB_URL) {
+	// DB is JawsDB on Heroku
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+	// DB is ALWAYS local on localhost
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -6,7 +16,10 @@ var connection = mysql.createConnection({
   user: "root",
   password: "Trainstogo1@",
   database: "burgers_db"
-});
+})
+};
+
+// Step 3: Make a connection to Mysql
 
 connection.connect(function(err) {
   if (err) {
@@ -16,4 +29,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
+// Step 4: Have ORM to Export connection
 module.exports = connection;

@@ -7,4 +7,4 @@ var port = process.env.PORT || 3000;
 var app = express();
 
 // step 2: Server content
-app.use(express.static(process.cwd() + ''));
+app.use(express.static(process.cwd() + '/public'));

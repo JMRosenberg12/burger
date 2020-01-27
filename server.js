@@ -1,4 +1,10 @@
 // step 1: pull in the requirements
 var express = require('express');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
+var expresshandlebars = require('expresshandlebars')
+
+var port = process.env.PORT || 3000;
+
+var app = express();
+
+// step 2: Server content
+app.use(express.static(process.cwd() + ''));

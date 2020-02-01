@@ -8,3 +8,4 @@ Here are the few things you need to know about....
 2. Whenever a user submits a burger's name, the app will display the he name of the burger on the left side of the page -- waiting to be devoured.
 3. There's the devour it button that can move the name of the left side.
 4. The app will store every burger in a database. To be devoured or not to be devoured? That is the question!
+5. Make sure when you deploy with heroku, use JawsDB for free, so you can make a new connection on mysql and use a burger schema to make a table to make the app working properly.
